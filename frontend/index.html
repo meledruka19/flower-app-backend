@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flower App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #f5f0ff;
+        padding-top: 40px;
+      }
+
+      #flower {
+        width: 100px; /* starting width */
+        transition: width 0.5s ease-in-out;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 12px 20px;
+        font-size: 16px;
+        background-color: #8b5cf6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #7c3aed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Our Flower 🌸</h1>
+
+    <img id="flower" src="./assets/sprout.png" alt="Flower" />
+
+    <br />
+
+    <button id="waterBtn">💧 Water Flower</button>
+
+    <p id="status"></p>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

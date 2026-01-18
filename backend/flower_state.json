@@ -1,0 +1,8 @@
+{
+  "growth_day": 0,
+  "is_dead": false,
+  "last_watered": {
+    "partner1": null,
+    "partner2": null
+  }
+}

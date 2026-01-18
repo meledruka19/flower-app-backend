@@ -1,0 +1,32 @@
+{
+  "name": "flower-app",
+  "version": "1.0.0",
+  "description": "Shared flower growing app",
+  "main": "main.js",
+  "author": "You",
+  "license": "MIT",
+
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+
+  "build": {
+    "appId": "com.flower.app",
+    "productName": "FlowerApp",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
