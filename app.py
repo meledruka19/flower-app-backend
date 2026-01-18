@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 from flask_cors import CORS
 from datetime import datetime, timedelta
 
@@ -27,10 +27,12 @@ def check_flower_death():
             return True
     return False
 
+# your routes here
 @app.route("/flower", methods=["GET"])
 def get_flower():
+    # return JSON data
     check_flower_death()
-    return jsonify(flower_state)
+    return jsonify({"day": 1, "growth": 100, "last_watered": None})
 
 @app.route("/water", methods=["POST"])
 def water_flower():
@@ -50,4 +52,4 @@ def water_flower():
     return jsonify(flower_state)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)  # important for deployment
